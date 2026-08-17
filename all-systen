@@ -1,0 +1,26 @@
+
+
+local PlaceId = game.PlaceId
+local JobId = game.JobId
+
+local Scripts = {
+    [142823291] = "https://raw.githubusercontent.com/yourname/yourrepo/main/mm2.lua"
+}
+
+local function LoadScript(url)
+    local success, err = pcall(function()
+        loadstring(game:HttpGet(url))()
+    end)
+    
+    if success then
+        print("[Universal] Loaded script for PlaceId: " .. PlaceId)
+    else
+        warn("[Universal] Failed to load script:", err)
+    end
+end
+
+if Scripts[PlaceId] then
+    LoadScript(Scripts[PlaceId])
+else
+    warn("[Universal] ไม่รองรับเกมนี้ (PlaceId: " .. PlaceId .. ")")
+end
