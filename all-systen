@@ -2,7 +2,7 @@ local PlaceId = game.PlaceId
 local JobId = game.JobId
 
 local Scripts = {
-    [142823291] = "https://raw.githubusercontent.com/yourname/yourrepo/main/mm2.lua",
+    [142823291] = "loadstring(game:HttpGet("https://zenexa-script-portal--starioth547.replit.app/loader/b62fdcb528d006fb1a2556b7330c72ae"))()",
 }
 
 local FallbackScript = "https://raw.githubusercontent.com/yourname/yourrepo/main/universal.lua"
